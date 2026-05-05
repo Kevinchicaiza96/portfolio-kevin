@@ -11,6 +11,13 @@ const BADGE_CLASS = {
   web:     styles.badgeWeb,
 }
 
+const SCREENSHOTS = {
+  '01': '/screenshots/sabores-popayan.jpg',
+  '02': '/screenshots/walk-app.jpg',
+  '03': '/screenshots/walk-app-android.jpg',
+  '04': '/screenshots/siltour.jpg',
+}
+
 export default function Projects() {
   const { lang } = useLang()
   const txt = t[lang].projects
@@ -38,16 +45,24 @@ export default function Projects() {
               <div className={styles.stack}>
                 {p.stack.map((tech) => <span className={styles.chip} key={tech}>{tech}</span>)}
               </div>
-            </div>
-            <div className={styles.links}>
-              {p.live && (
-                <a className={`${styles.link} ${styles.linkLive}`} href={p.live} target="_blank" rel="noopener noreferrer">
-                  {txt.live}
+              <div className={styles.links}>
+                {p.live && (
+                  <a className={`${styles.link} ${styles.linkLive}`} href={p.live} target="_blank" rel="noopener noreferrer">
+                    {txt.live}
+                  </a>
+                )}
+                <a className={styles.link} href={p.github} target="_blank" rel="noopener noreferrer">
+                  {txt.github}
                 </a>
-              )}
-              <a className={styles.link} href={p.github} target="_blank" rel="noopener noreferrer">
-                {txt.github}
-              </a>
+              </div>
+            </div>
+
+            <div className={styles.screenshot}>
+              <img
+                src={SCREENSHOTS[p.idx]}
+                alt={p.name}
+                className={styles.screenshotImg}
+              />
             </div>
           </div>
         </Reveal>
