@@ -124,3 +124,19 @@
   .screenshot { width: 100%; }
   .links { flex-direction: row; }
 }
+
+.screenshotAndroid {
+  width: 75px;
+  height: 150px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  margin: 0 auto;
+  filter: grayscale(15%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.screenshotAndroid:hover {
+  filter: grayscale(0%);
+  transform: scale(1.04);
+}

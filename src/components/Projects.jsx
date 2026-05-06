@@ -61,7 +61,7 @@ export default function Projects() {
               <img
                 src={SCREENSHOTS[p.idx]}
                 alt={p.name}
-                className={styles.screenshotImg}
+                className={p.badge === 'android' ? styles.screenshotAndroid : styles.screenshotImg}
               />
             </div>
           </div>
