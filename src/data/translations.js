@@ -16,7 +16,7 @@ export const t = {
     // HERO
     hero: {
       eyebrow: '// desarrollador full stack · popayán, colombia',
-      title: 'Kevin Chicaiza.',
+      title: 'Kevin Chicaíza.',
       subtitle: 'Construyo para la web.',
       desc: 'Especializado en React.js, Django y Android. Creo productos digitales que resuelven problemas reales — desde plataformas PWA con GPS hasta directorios gastronómicos en producción.',
       cta: 'Ver proyecto en vivo ↗',
